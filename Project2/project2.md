@@ -2,9 +2,10 @@
 
 ## Link https://people.rit.edu/eds7847/235/project2/git-finder.html
 
-###INFO:
-Redone Giphy Finder.
-Features
+###INFO: Redone Giphy Finder.
+
+###Features
+
 ####CopyURL and Favorite on each gif
 
 CopyURL copies to clipboard
