@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	 <title>Giphy Finder</title>
+	 <link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="main.js"></script>
+	<!--creates URLCOPY and Favorite button in the main.js file then uses these methods to run-->
+	<script> 
+		//simply copies to clipboard using a clipboard input box that will not appear on screen
+		function URLCOPY(clicked_id){
+			let inputClipboard=document.querySelector('#clipboard');
+			inputClipboard.value=clicked_id;
+			inputClipboard.select();
+			document.execCommand('Copy');
+			localStorage.removeItem("Favorites");
+			localStorage.removeItem("Favorite");
+		}
+		//simply copies url(clicked_id) and inserts it into favorites, checks if there are no favorites
+		function Favorite(clicked_id){
+			let favoriteArray =JSON.parse(localStorage.getItem("Favorites"));
+			console.log(favoriteArray);
+			if(favoriteArray==null){
+				let favoriteArr=[];
+				favoriteArr.push(`<img src= '${clicked_id}' alt=''/>`);
+				localStorage.setItem("Favorites",JSON.stringify(favoriteArr));
+				document.querySelector("aside").innerHTML="Favorites:"+favoriteArr;
+			}
+			else{
+				favoriteArray.push(`<img src= '${clicked_id}'alt=''/>`);
+				localStorage.setItem("Favorites",JSON.stringify(favoriteArray));
+				document.querySelector("aside").innerHTML="Favorites:\n"+favoriteArray;
+			}
+		}
+	</script>
+</head>
+<body>
+<header>
+		<div id=titleBox class=sticky>
+		<h1>Giphy Finder</h1>
+		<aside>
+			Favorites:
+		</aside>
+		</div>
+<div id=menuBar>
+	<div id=image><!--background url image goes here--></div>
+	<div class="widgets sticky">
+			<div id=term>
+				Search Term -> 
+				<input id="searchterm" type="text" size="20" maxlength="20" autofocus value="cats" />
+			</div>
+			<div id=max>
+				Max # results -> 
+				<select id="limit">
+					<option value="5">5</option>
+					<option value="10" selected>10</option>
+					<option value="25">25</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+			</div>
+			<!--<img src="images/menubar.png" alt="">-->
+			<button type="button" id="search" class="green">Find some GIFs!</button>
+			<div>
+			<button type="button" id="previous" class="green">Previous</button>
+			<button type="button" id="next" class="green">Next</button>
+			</div>
+		<div id="status">Page:</div>
+	</div>
+	<h2>Results</h2><!--ONLY IN HEADER SINCE FLEXBOX WON't WORK OTHERWISE-->
+	<div id="content">
+		<p>No data yet!</p>
+	</div>
+	<!--won't actually appear used to run URLCOPY-->
+	<input id="clipboard" type="text" aria-hidden="true" value=""/>
+</div>
+</header><!--header only includes content for proper flex-->
+<footer>
+	<button type="button" id="previous2" class="green">Previous</button>
+	<button type="button" id="next2" class="green">Next</button>
+</footer>
+</body>
+</html>
