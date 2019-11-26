@@ -20,3 +20,5 @@ Images are justified by center and grabbed by use of the giphy api fixed_height_
 another and a decent size
 
 Buttons are redone using a gradient generator https://angrytools.com/gradient/
+
+Content sadly is within the header tag flexbox wouldn't have worked otherwise.
