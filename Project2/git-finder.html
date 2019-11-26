@@ -13,8 +13,6 @@
 			inputClipboard.value=clicked_id;
 			inputClipboard.select();
 			document.execCommand('Copy');
-			localStorage.removeItem("Favorites");
-			localStorage.removeItem("Favorite");
 		}
 		//simply copies url(clicked_id) and inserts it into favorites, checks if there are no favorites
 		function Favorite(clicked_id){
