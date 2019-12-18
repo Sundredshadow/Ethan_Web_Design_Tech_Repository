@@ -3,7 +3,7 @@
 "use strict";
 
 const app = new PIXI.Application(600,600);
-document.body.appendChild(app.view);
+document.body.querySelector('#game').appendChild(app.view);
 
 //download video
 // create a video texture from a path
