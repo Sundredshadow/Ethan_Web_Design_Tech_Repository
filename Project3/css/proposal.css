@@ -90,9 +90,10 @@ a{
     border-style:solid;
     border-width:2px;
 }
-canvas{
-    text-align: center;
-    margin-left:50vw;
+#game
+{
+    margin-left: 30vw;
+    margin-right: 50vw;
 }
 
 
