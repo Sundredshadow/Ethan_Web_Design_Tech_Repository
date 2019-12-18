@@ -1,22 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CyberStrike</title>
-        <link rel="stylesheet" href="css/proposal.css">
-    </head>
-    <body>
-        <div class=wrapper>
-            <div id=title>
-                <h1>CyberStrike</h1>
-                <img src="media/lock.jpg" alt=lock>
-            </div>
-            <div class=mainNav>
-                <a href="https://people.rit.edu/eds7847/235/#"><div class=mainID id=home>Home(235)</div></a>
-                <a href="proposal.html"><div class=mainID id=proposal>Proposal</div></a>
-                <a href="project.html"><div class=mainID id=project>Project</div></a>
-                <a href="documentation.html"><div class=mainID id=documentation>Documentation</div></a>
-                <a href="index.html"><div class=mainID id=launch>Landing Page</div></a>
-            </div>
-        </div>
-    </body>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>HackerMan</title>
+    <link rel="stylesheet" href="css/proposal.css">
+	<style>
+	body{
+		cursor: url(images/move.png) 8 8,crosshair;
+	}
+	</style>
+</head>
+<body>
+<div class=wrapper>
+	<div id=title>
+		<h1>HackerMan</h1>
+	</div>
+	<div class=mainNav>
+		<a href="https://people.rit.edu/eds7847/235/#"><div class=mainID id=home>Home(235)</div></a>
+		<a href="proposal.html"><div class=mainID id=proposal>Proposal</div></a>
+		<a href="project.html"><div class=mainID id=project>Project</div></a>
+		<a href="documentation.html"><div class=mainID id=documentation>Documentation</div></a>
+		<a href="index.html"><div class=mainID id=launch>Landing Page</div></a>
+	</div>
+</div>
+<div id=game>
+    <!-- External libraries -->
+    <!-- https://github.com/pixijs/pixi.js?utm_source=html5weekly -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.6.0/pixi.min.js"></script>
+
+    <!--  https://github.com/goldfire/howler.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.js"></script>
+
+    <!-- My JS files -->
+    <script src="js/utilities.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/main.js"></script>
+</div>
+<footer>Author: Ethan Shea Last Edited:10/9/19 </footer>
+</body>
 </html>
